@@ -150,6 +150,11 @@ tr:hover {
 
 /* Responsive Table for Mobile */
 @media (max-width: 1000px) {
+    body {
+        overflow: auto;
+        align-items: flex-start;
+        padding-top: 50px;
+    }
     
     table, 
     thead, 
