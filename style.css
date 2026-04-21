@@ -34,7 +34,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 20px;
     background-color: var(--background-color);
-    color: var(--alt-text-color);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
