@@ -83,3 +83,13 @@ th {
 th:hover {
     background-color: var(--header-hover-color);
 }
+
+td {
+    font-size: 0.9rem;
+}
+
+.name-column,
+.username-column,
+.country-column {
+    width: 200px;
+}
