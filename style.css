@@ -147,3 +147,17 @@ tr:hover {
 .theme-toggle:hover {
     color: var(--text-color);
 }
+
+/* Responsive Table for Mobile */
+@media (max-width: 1000px) {
+    
+    table, 
+    thead, 
+    tbody, 
+    th, 
+    td, 
+    tr {
+        display: block;
+    }
+}
+
