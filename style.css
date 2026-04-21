@@ -46,7 +46,6 @@ body {
     height: 600px;
     position:relative;
     top: -25px;
-    border: 1px solid var(--text-color);
 }
 
 h1 {
@@ -68,5 +67,5 @@ table {
     border-spacing: 0;
     box-shadow: var(--box-shadow);
     overflow: hidden;
-    
+
 }
