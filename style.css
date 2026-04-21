@@ -172,8 +172,13 @@ tr:hover {
     tr:nth-child(even) {
         background-color: var(--even-row-bg);
     }
+    
     tr:nth-child(even):hover {
         background-color: var(--table-hover-bg);
+    }
+
+    td:not(:last-of-type) {
+        border-bottom: 1px solid #e0e0e0;
     }
 }
 
