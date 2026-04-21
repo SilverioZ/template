@@ -183,6 +183,9 @@ tr:hover {
 
     td::before {
         content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
     }
 }
 
