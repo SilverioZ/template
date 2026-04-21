@@ -167,5 +167,8 @@ tr:hover {
     tr:nth-child(even) {
         background-color: var(--even-row-bg);
     }
+    tr:nth-child(even):hover {
+        background-color: var(--table-hover-bg);
+    }
 }
 
