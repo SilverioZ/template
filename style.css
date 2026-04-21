@@ -77,4 +77,9 @@ th, td {
 th {
     background-color: var(--header-color);
     color: var(--alt-text-color);
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: var(--header-hover-color);
 }
