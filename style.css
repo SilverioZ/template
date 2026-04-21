@@ -177,6 +177,11 @@ tr:hover {
         background-color: var(--table-hover-bg);
     }
 
+    td {
+        position: relative;
+    }
+
+    
     td:not(:last-of-type) {
         border-bottom: 1px solid #e0e0e0;
     }
