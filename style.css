@@ -67,5 +67,14 @@ table {
     border-spacing: 0;
     box-shadow: var(--box-shadow);
     overflow: hidden;
+}
 
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--header-color);
+    color: var(--alt-text-color);
 }
