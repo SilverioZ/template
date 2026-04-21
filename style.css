@@ -56,7 +56,7 @@ h1 {
 .spinner i {
     position: absolute;
     top: 45%;
-    left: 45%;
+    left: 48%;
     font-size: 2rem;
     color: var(--primary-color);    
 }
