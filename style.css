@@ -123,6 +123,10 @@ tr:hover {
     cursor: default;
 }
 
+.pagination i {
+    font-size: 1.1rem;
+}
+
 /* Dark Mode Toggle */
 .theme-toggle {
     position: absolute;
