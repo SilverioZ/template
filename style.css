@@ -60,3 +60,13 @@ h1 {
     font-size: 2rem;
     color: var(--primary-color);    
 }
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    
+}
