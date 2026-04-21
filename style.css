@@ -118,6 +118,11 @@ tr:hover {
     color: var(--primary-color);
 }
 
+.pagination button:disabled {
+    color: #ccc;
+    cursor: default;
+}
+
 /* Dark Mode Toggle */
 .theme-toggle {
     position: absolute;
