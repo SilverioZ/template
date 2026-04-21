@@ -49,3 +49,7 @@ body {
     border: 1px solid var(--text-color);
 }
 
+h1 {
+    margin-bottom: 10px;
+}
+
