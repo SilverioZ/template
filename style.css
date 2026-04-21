@@ -110,6 +110,14 @@ tr:hover {
     height: 55px;
 }
 
+.pagination button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
 /* Dark Mode Toggle */
 .theme-toggle {
     position: absolute;
