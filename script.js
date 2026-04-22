@@ -37,8 +37,6 @@ function displayTable(dataToDisplay) {
     console.log('start', start, 'end', end);
     const paginatedItems = dataToDisplay.slice(start, end);
    
-
-
     paginatedItems.forEach(user => {
         const row = 
                  `<tr>
@@ -50,6 +48,25 @@ function displayTable(dataToDisplay) {
             tableBody.insertAdjacentHTML('beforeend', row);    
     });
 }
+
+// Previous Page
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        displayTable(data);
+    }
+}
+
+// Next Page
+function nextPage() {
+    if (currentPage * rowsPerPage < data.length) {
+        currentPage++;
+        displayTable(data);
+    }
+}
+
+
+
 
 //  Startup
 fetchData();
