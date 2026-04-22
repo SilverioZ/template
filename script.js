@@ -53,6 +53,7 @@ function displayTable(dataToDisplay) {
 
 // Sort table by column index
 function sortTable(columnIndex) {
+    clearSortIcons();
 
     if (!sortDirection[columnIndex]) {
         sortDirection[columnIndex] = 'asc';
@@ -91,6 +92,14 @@ function sortTable(columnIndex) {
    updateSortIcons(columnIndex, sortDirection[columnIndex]);
     
     displayTable(sortedData);
+}
+
+// Clear sort icons for all columns
+function clearSortIcons() {
+    for (let i = 0; i < 4; i++) {
+        const icon = document.getElementById(`icon-${i}`);
+        icon.className = 'fa fa-sort';
+    }
 }
 
 // Update sort icon based on sortDirection
