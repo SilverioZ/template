@@ -23,6 +23,7 @@ async function fetchData() {
 
 // Display table data
 function displayTable(dataToDisplay) {
+    tableBody.innerText = '';
     dataToDisplay.forEach(user => {
         const row = 
                  `<tr>
