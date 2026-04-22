@@ -54,8 +54,31 @@ function displayTable(dataToDisplay) {
 
 // Sort table by column index
 function sortTable(columnIndex) {
-    console.log(columnIndex);
-;}
+    
+    sortedData = [...data].sort((a, b) => {
+        let valA, valB;
+        switch (columnIndex) {
+            case 0:
+                valA = `${a.name.first} ${a.name.last}`;
+                valB = `${b.name.first} ${b.name.last}`;
+                break;
+            case 1:
+                valA = a.email;
+                valB = b.email;
+                break; 
+            case 2:
+                valA = a.login.username;
+                valB = b.login.username;
+                break;
+            case 3:
+                valA = a.location.country;
+                valB = b.location.country;
+                break;
+        }
+    });
+
+    displayTable(sortedData);
+}
 
 
 
