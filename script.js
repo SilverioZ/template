@@ -12,6 +12,7 @@ let data = [];
 async function fetchData() {
     spinner.style.display = 'flex';
     try {
+        await new Promise(resolve => setTimeout(resolve, 1000)); 
         const response = await fetch('https://randomuser.me/api/?results=50');
         const json = await response.json();
         data = json.results;
@@ -19,6 +20,10 @@ async function fetchData() {
         displayTable(data);
     } catch (error) {
         console.error('Error fetching data:', error);
+    } finally {
+        spinner.style.display = 'none';
+        table.style.display = 'block';
+        pagination.style.display = 'block';
     }
 }
 
