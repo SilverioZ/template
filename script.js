@@ -112,16 +112,16 @@ function updateSortIcons(columnIndex, direction) {
     function prevPage() {
     if (currentPage > 1) {
         currentPage--;
-        displayTable(data);
+        displayTable(sortedData);
         updateButtons();
     }
 }
 
 // Next Page
 function nextPage() {
-    if (currentPage * rowsPerPage < data.length) {
+    if (currentPage * rowsPerPage < sortedData.length) {
         currentPage++;
-        displayTable(data);
+        displayTable(sortedData);
         updateButtons();
     }
 }
@@ -130,7 +130,7 @@ function nextPage() {
 function updateButtons() {
     pageNumber.innerText = currentPage;
     prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = currentPage * rowsPerPage >= data.length;
+    nextBtn.disabled = currentPage * rowsPerPage >= sortedData.length;
 }
 
 
