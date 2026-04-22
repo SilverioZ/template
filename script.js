@@ -10,6 +10,14 @@ let data = [];
 
 // Fetch data from API
 async function fetchData() {
+    try {
+        const response = await fetch('https://randomuser.me/api/?results=50');
+        const json = await response.json();
+        data = json.results;
+        console.log(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
 }
 
 
