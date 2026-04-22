@@ -7,8 +7,10 @@ const nextBtn = document.getElementById('next-btn');
 const pageNumber = document.getElementById('page-number');
 
 let data = [];
+let sortedData = [];
 let currentPage = 1;
 const rowsPerPage = 10;
+let sortDirection = {};
 
 // Fetch data from API
 async function fetchData() {
@@ -18,8 +20,8 @@ async function fetchData() {
         const response = await fetch('https://randomuser.me/api/?results=50');
         const json = await response.json();
         data = json.results;
-        console.log(data);
-        displayTable(data);
+        sortedData = [...data];
+        displayTable(sortedData);
         updateButtons();
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -50,8 +52,15 @@ function displayTable(dataToDisplay) {
     });
 }
 
-// Previous Page
-function prevPage() {
+// Sort table by column index
+function sortTable(columnIndex) {
+    console.log(columnIndex);
+;}
+
+
+
+    // Previous Page
+    function prevPage() {
     if (currentPage > 1) {
         currentPage--;
         displayTable(data);
