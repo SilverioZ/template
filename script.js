@@ -7,6 +7,8 @@ const nextBtn = document.getElementById('next-btn');
 const pageNumber = document.getElementById('page-number');
 
 let data = [];
+let currentPage = 1;
+const rowsPerPage = 10;
 
 // Fetch data from API
 async function fetchData() {
@@ -30,6 +32,13 @@ async function fetchData() {
 // Display table data
 function displayTable(dataToDisplay) {
     tableBody.innerText = '';
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    console.log('start', start, 'end', end);
+    const paginatedItems = dataToDisplay.slice(start, end);
+   
+
+
     dataToDisplay.forEach(user => {
         const row = 
                  `<tr>
