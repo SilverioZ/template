@@ -20,6 +20,7 @@ async function fetchData() {
         data = json.results;
         console.log(data);
         displayTable(data);
+        updateButtons();
     } catch (error) {
         console.error('Error fetching data:', error);
     } finally {
@@ -54,6 +55,7 @@ function prevPage() {
     if (currentPage > 1) {
         currentPage--;
         displayTable(data);
+        updateButtons();
     }
 }
 
@@ -62,7 +64,15 @@ function nextPage() {
     if (currentPage * rowsPerPage < data.length) {
         currentPage++;
         displayTable(data);
+        updateButtons();
     }
+}
+
+// Update pagination buttons
+function updateButtons() {
+    pageNumber.innerText = currentPage;
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage * rowsPerPage >= data.length;
 }
 
 
