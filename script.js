@@ -19,6 +19,7 @@ if (isDarkMode) {
 
 // Toggle dark mode and update text
 themeToggle.addEventListener('click', () => {
+    body.style.transition = 'background-color 3s, color 3s';
     if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
         themeToggle.innerText = 'Dark Mode';
