@@ -10,6 +10,7 @@ let data = [];
 
 // Fetch data from API
 async function fetchData() {
+    spinner.style.display = 'flex';
     try {
         const response = await fetch('https://randomuser.me/api/?results=50');
         const json = await response.json();
