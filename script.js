@@ -37,7 +37,6 @@ function displayTable(dataToDisplay) {
     tableBody.innerText = '';
     const start = (currentPage - 1) * rowsPerPage;
     const end = start + rowsPerPage;
-    console.log('start', start, 'end', end);
     const paginatedItems = dataToDisplay.slice(start, end);
    
     paginatedItems.forEach(user => {
