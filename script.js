@@ -76,7 +76,7 @@ function sortTable(columnIndex) {
                 break;
         }
         
-        return valA.localCompare(valB);
+        return valA.localeCompare(valB);
     });
 
     displayTable(sortedData);
