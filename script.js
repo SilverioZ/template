@@ -39,7 +39,7 @@ function displayTable(dataToDisplay) {
    
 
 
-    dataToDisplay.forEach(user => {
+    paginatedItems.forEach(user => {
         const row = 
                  `<tr>
                     <td data-label="Name">${user.name.first} ${user.name.last}</td>
