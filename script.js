@@ -88,13 +88,17 @@ function sortTable(columnIndex) {
 
     sortDirection[columnIndex] = sortDirection[columnIndex] === 'asc' ? 'desc' : 'asc';
    
-    console.log(sortDirection);
+   updateSortIcons(columnIndex, sortDirection[columnIndex]);
     
     displayTable(sortedData);
 }
 
-
-
+// Update sort icon based on sortDirection
+function updateSortIcons(columnIndex, direction) {
+    const icon = document.getElementById(`icon-${columnIndex}`);
+    icon.className = direction === 'asc' ?  'fas fa-sort-down' : 'fas fa-sort-up';
+}
+    
     // Previous Page
     function prevPage() {
     if (currentPage > 1) {
