@@ -54,6 +54,10 @@ function displayTable(dataToDisplay) {
 
 // Sort table by column index
 function sortTable(columnIndex) {
+
+    if (!sortDirection[columnIndex]) {
+        sortDirection[columnIndex] = 'asc';
+    }
     
     sortedData = [...data].sort((a, b) => {
         let valA, valB;
@@ -76,9 +80,17 @@ function sortTable(columnIndex) {
                 break;
         }
         
-        return valA.localeCompare(valB);
+        if (sortDirection[columnIndex] === 'desc') {
+            return valB.localeCompare(valA);
+        } else {
+            return valA.localeCompare(valB);
+        }
     });
 
+    sortDirection[columnIndex] = sortDirection[columnIndex] === 'asc' ? 'desc' : 'asc';
+   
+    console.log(sortDirection);
+    
     displayTable(sortedData);
 }
 
