@@ -1,3 +1,35 @@
+const spinner = document.getElementById('spinner');
+const table = document.getElementById('data-table');
+const tableBody = document.getElementById('table-body');
+const pagination = document.getElementById('pagination');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const pageNumber = document.getElementById('page-number');
+
+let data = [];
+
+// Fetch data from API
+async function fetchData() {
+}
+
+
+//  Startup
+fetchData();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
