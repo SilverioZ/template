@@ -15,11 +15,25 @@ async function fetchData() {
         const json = await response.json();
         data = json.results;
         console.log(data);
+        displayTable(data);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
 }
 
+// Display table data
+function displayTable(dataToDisplay) {
+    dataToDisplay.forEach(user => {
+        const row = 
+                 `<tr>
+                    <td data-label="Name">${user.name.first} ${user.name.last}</td>
+                    <td data-label="Email">${user.email}</td>
+                    <td data-label="Username">${user.login.username}</td>
+                    <td data-label="Country">${user.location.country}</td>
+                </tr>`;
+            tableBody.insertAdjacentHTML('beforeend', row);    
+    });
+}
 
 //  Startup
 fetchData();
