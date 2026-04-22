@@ -22,7 +22,7 @@ async function fetchData() {
         console.error('Error fetching data:', error);
     } finally {
         spinner.style.display = 'none';
-        table.style.display = 'block';
+        table.style.display = 'table';
         pagination.style.display = 'block';
     }
 }
