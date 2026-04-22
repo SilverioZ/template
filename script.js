@@ -75,6 +75,8 @@ function sortTable(columnIndex) {
                 valB = b.location.country;
                 break;
         }
+        
+        return valA.localCompare(valB);
     });
 
     displayTable(sortedData);
